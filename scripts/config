@@ -10,13 +10,11 @@
 
 source /usr/share/yunohost/helpers
 
-#REMOVEME? ynh_abort_if_errors
-
 #=================================================
 # RETRIEVE ARGUMENTS
 #=================================================
 
-final_path=$(ynh_app_setting_get $app final_path)
+install_dir=$(ynh_app_setting_get $app install_dir)
 
 #=================================================
 # SPECIFIC GETTERS FOR TOML SHORT KEY
@@ -29,10 +27,6 @@ get__xms() {
 get__xmx() {
     ynh_app_setting_get --key=xmx
 }
-
-#=================================================
-# SPECIFIC VALIDATORS FOR TOML SHORT KEYS
-#=================================================
 
 #=================================================
 # SPECIFIC SETTERS FOR TOML SHORT KEYS
