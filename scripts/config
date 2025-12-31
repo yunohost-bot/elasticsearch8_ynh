@@ -33,9 +33,9 @@ get__xmx() {
 #=================================================
 
 regenerate_jvm_options() {
-    ynh_config_add --template="jvm.options" --destination="$final_path/config/jvm.options.d/yunohost.options"
-    chown $app:$app "$final_path/config/jvm.options.d/yunohost.options"
-    chmod 400 "$final_path/config/jvm.options.d/yunohost.options"
+    ynh_config_add --template="jvm.options" --destination="$install_dir/config/jvm.options.d/yunohost.options"
+    chown $app:$app "$install_dir/config/jvm.options.d/yunohost.options"
+    chmod 400 "$install_dit/config/jvm.options.d/yunohost.options"
 }
 
 set__xms() {
